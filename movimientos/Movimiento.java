@@ -1,15 +1,15 @@
-package pokemon.pokemon;
+package PokemonPoli.PokemonPoli;
 
 public class Movimiento {
     private String nombre;
-    private int puntosDeAtaque;
+    private int PuntosDeAtaque;
     private int pp;
     private Tipo tipo;
     private TipoAtaque TipoAtaque;
 
-    Movimiento(String nombre, int puntosDeAtaque, Tipo tipo, int pp, TipoAtaque TipoAtaque) {
+    Movimiento(String nombre, int PuntosDeAtaque, Tipo tipo, int pp, TipoAtaque TipoAtaque) {
         this.nombre = nombre;
-        this.puntosDeAtaque = puntosDeAtaque;
+        this.PuntosDeAtaque = PuntosDeAtaque;
         this.pp = pp;
         this.tipo = tipo;
         this.TipoAtaque = TipoAtaque;
@@ -41,12 +41,12 @@ public class Movimiento {
 
 private Movimiento movimientos[];
 
-public void setMovimiento(int indice, Movimiento movimiento) {
-    movimientos[indice] = movimiento;
+public void setMovimiento(int Indice, Movimiento movimiento) {
+    movimientos[Indice] = movimiento;
 }
 
-public Movimiento getMovimiento(int indice) {
-    return movimientos[indice];
+public Movimiento getMovimiento(int Indice) {
+    return movimientos[Indice];
 }
 
 }
