@@ -1,4 +1,4 @@
-package pokemon.pokemon;
+package PokemonPoli.PokemmonPoli;
 
 public abstract class Pokemon {
 
@@ -62,37 +62,37 @@ public abstract class Pokemon {
         this.movimientos = movimientos;
     }
 
-    protected void calculaDanio(int danio, double efectividad) {
-        double puntosRestados = danio * efectividad;
-        this.PS -= puntosRestados;
-        System.out.printf("%s recibe %.2f puntos de daño\n", this.getClass().getSimpleName(), puntosRestados);
+    protected void CalcularDanio(int danio, double efectividad) {
+        double PuntosMenos = danio * efectividad;
+        this.PS -= PuntosMenos;
+        System.out.printf("%s recibio %.2f este daño\n", this.getClass().getSimpleName(), PuntosMenos);
     }
 
-    public void recibirAtaques(Movimiento movimiento, double efectividad) {
-        System.out.printf("%s recibe ATK %s\n", this.getClass().getSimpleName(), movimiento.getNombre());
-        calculaDanio(movimiento.getPuntosDeAtaque(), efectividad);
+    public void AtaqueRecibido(Movimiento movimiento, double efectividad) {
+        System.out.printf("%s recibio este Ataque %s\n", this.getClass().getSimpleName(), movimiento.getNombre());
+        CalcularDanio(movimiento.getPuntosDeAtaque(), efectividad);
     }
 
-    protected boolean seHaConcretadoAtaque(Movimiento movimiento, Pokemon pokemon) {
-        System.out.printf("%s ataca %s con %s\n", this.getClass().getSimpleName(), pokemon.getClass().getSimpleName(), movimiento.getNombre());
-        double efectividad = obtenerEfectividad(pokemon);
+    protected boolean AtaqueRealizado(Movimiento movimiento, Pokemon pokemon) {
+        System.out.printf("%s ataco %s con %s\n", this.getClass().getSimpleName(), pokemon.getClass().getSimpleName(), movimiento.getNombre());
+        double efectividad = EfectividadObtenida(pokemon);
 
         if (movimiento.getPp() > 0) {
-            pokemon.recibirAtaques(movimiento, efectividad);
+            pokemon.AtaqueRecibido(movimiento, efectividad);
             return true;
         } else {
-            System.err.println("El movimiento no tiene puntos de PP");
+            System.err.println("Este mmovimiento no tiene puntos de PP");
             return false;
         }
     }
 
-    public void atacar(int m, Pokemon pokemon) {
+    public void atacar(int A, Pokemon pokemon) {
         Movimiento movimiento = getMovimientos()[m];
-        boolean seHaConcretadoAtaque = seHaConcretadoAtaque(movimiento, pokemon);
-        if (seHaConcretadoAtaque) {
+        boolean AtaqueRealizado = AtaqueRealizado(movimiento, pokemon);
+        if (AtaqueRealizado) {
             movimiento.setPp(movimiento.getPp() - 1);
         }
     }
 
-    public abstract double obtenerEfectividad(Pokemon pokemon);
+    public abstract double EfectividadObtenida(Pokemon pokemon);
 }
