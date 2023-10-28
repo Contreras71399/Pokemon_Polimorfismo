@@ -1,4 +1,4 @@
-package pokemon.pokemon;
+package PokemonPoli.PokemonPoli;
 public enum Tipo {
     ACERO,AGUA, BICHO,
     DRAGON, ELECTRICO, FANTASMA,
