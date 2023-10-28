@@ -1,4 +1,5 @@
-package pokemon.pokemon;
+package PokemonPoli.PokemonPoli;
+
 import java.util.ArrayList;
 
 public class ListaMovimientos {
@@ -6,21 +7,21 @@ private ArrayList<Movimiento> movimientos = new ArrayList<>();
     
     public ListaMovimientos(){
         
-        //Movimiento de tipo fuego
-        movimientos.add(new Movimiento("Destructor", 40, Tipo.NORMAL, 35, TipoAtaque.FISICO));
-        movimientos.add(new Movimiento("Poder Pasado", 60, Tipo.ROCA, 5, TipoAtaque.FISICO ));
-        movimientos.add(new Movimiento("Esfera Aural", 80, Tipo.LUCHA, 20, TipoAtaque.ESPECIAL ));
-        movimientos.add(new Movimiento("Psiquico", 90, Tipo.PSIQUICO, 10, TipoAtaque.ESPECIAL ));
+        
+        movimientos.add(new Movimiento("Foco Resplandor", 80, Tipo.ACERO, 10, TipoAtaque.ESPECIAL));
+        movimientos.add(new Movimiento("Pistola Agua", 40, Tipo.AGUA, 25, TipoAtaque.ESPECIAL ));
+        movimientos.add(new Movimiento("Giro Rapido", 20, Tipo.NORMAL, 40, TipoAtaque.FISICO ));
+        movimientos.add(new Movimiento("Agua Cola", 90, Tipo.AGUA, 10, TipoAtaque.FISICO ));
                
-        //Movimiento de tipo electrico
-        movimientos.add(new Movimiento("Tornado",40, Tipo.VOLADOR, 35,TipoAtaque.ESPECIAL));
-        movimientos.add(new Movimiento("Nieve Polvo",40, Tipo.ELECTRICO, 25,TipoAtaque.ESPECIAL));
-        movimientos.add(new Movimiento("Esquirla Helada",40, Tipo.ELECTRICO, 30,TipoAtaque.FISICO));
-        movimientos.add(new Movimiento("Liofilizacion",70, Tipo.ELECTRICO, 20,TipoAtaque.FISICO));
+        
+        movimientos.add(new Movimiento("Lenguetazo",30, Tipo.FANTASMA, 30,TipoAtaque.FISICO));
+        movimientos.add(new Movimiento("Bola Sombra",80, Tipo.FANTASMA, 15,TipoAtaque.ESPECIAL));
+        movimientos.add(new Movimiento("Come Sueños",100, Tipo.PSIQUICO, 15,TipoAtaque.ESPECIAL));
+        movimientos.add(new Movimiento("Puño Sombra",60, Tipo.FANTASMA, 20,TipoAtaque.FISICO));
         }
     
-    // Metodo que devuelve el movimiento buscando el nombre
-    public Movimiento buscarMovimientoPorNombre(String nombre){
+  
+    public Movimiento MovimientoPorNombre(String Nombre){
         for (Movimiento movimiento : movimientos){
             if (movimiento.getNombre().equals(nombre)){
                 return movimiento;
