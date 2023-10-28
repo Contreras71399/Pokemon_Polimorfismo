@@ -1,7 +1,7 @@
-package pokemon.pokemon;
+package PokemonPoli.PokemonPoli;
 
-public class Articuno extends Pokemon {
-    public Articuno(Tipo tipo, int PS, int Ataque, int Defensa, int AtaqueEspecial, int DefensaEspecial, int Velocidad, int Nivel) {
+public class Blastoise extends Pokemon {
+    public Blastoise(Tipo tipo, int PS, int Ataque, int Defensa, int AtaqueEspecial, int DefensaEspecial, int Velocidad, int Nivel) {
         super(Tipo.AGUA, 139, 148, 100, 85, 105, 78, 54);
 
         ListaMovimientos listaMovimientos = new ListaMovimientos();
