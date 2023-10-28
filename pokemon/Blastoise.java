@@ -2,7 +2,7 @@ package PokemonPoli.PokemonPoli;
 
 public class Blastoise extends Pokemon {
     public Blastoise(Tipo tipo, int PS, int Ataque, int Defensa, int AtaqueEspecial, int DefensaEspecial, int Velocidad, int Nivel) {
-        super(Tipo.AGUA, 139, 148, 100, 85, 105, 78, 54);
+        super(Tipo.AGUA, 139, 148, 100, 85, 105, 78, 10);
 
         ListaMovimientos listaMovimientos = new ListaMovimientos();
 
